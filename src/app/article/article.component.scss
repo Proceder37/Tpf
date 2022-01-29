@@ -6,6 +6,7 @@
         height: auto;
         justify-content: space-around;
         padding: 24px ;
+        text-align: center;
     }
     .section2 {
         display: flex;
@@ -13,10 +14,11 @@
         height: auto;
         justify-content: space-around;
         padding:24px;
+        text-align: center;
     }
     img{
-        width: 500px;
-        height: 320px;
+        width: 80%;
+        height: auto;
     }
     .tittle{
         font-size: xx-large;

@@ -9,6 +9,7 @@ import { ArticleComponent } from './article/article.component';
 import { DrinksComponent } from './drinks/drinks.component';
 import { ShotsComponent } from './shots/shots.component';
 import { CocktailsComponent } from './cocktails/cocktails.component';
+import { ArticleDetailsComponent } from './article/article-details/article-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CocktailsComponent } from './cocktails/cocktails.component';
     ArticleComponent,
     DrinksComponent,
     ShotsComponent,
-    CocktailsComponent
+    CocktailsComponent,
+    ArticleDetailsComponent
   ],
   imports: [
     BrowserModule,

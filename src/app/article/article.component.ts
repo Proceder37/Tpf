@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
+  public article=[
+    {"id":1, "name":"Drinki Wegańskie", "img":"weganskie-koktajle.png" },
+    {"id":2, "name":"Idealna Cytrynówka", "img":"cytrynowka.png" },
+    {"id":3, "name":"Właściwości czarnego piwa", "img":"czarne-piwo.png" }
+  ]
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,25 @@
-.dashboard{
+.description{
     width: 100%;
     height: auto;
-    background-color: #54505A;
+    padding:10px 0 20px 20px ;
+    text-align: center;
+    .subtittle{
+        font-size: large;
+        padding: 0 20px;
+    }
 }
+.ad{
+    text-align: center;
+    padding-top: 10px;
+    font-size: larger;
+    .winner{
+        padding: 20px 10px;
+        font-size: xx-large;
+        font-weight: 500;
+    }
+    img{
+        width: 40%;
+        height: auto;
+    }
+}
+
