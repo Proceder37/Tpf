@@ -1,34 +1,8 @@
-<div class= "wrapper">
-    <div class="section1">
-        <div class="drink1">
-            <img src="../../../../assets/images/weganskie-koktajle.png" alt="photo">
-            <div class="tittle">Drinki Wegańskie</div>
-        </div>
-        <div class="drink2">
-            <img src="../../../../assets/images/cytrynowka.png" alt="photo">
-            <div class="tittle">Idealna Cytrynówka</div>
-        </div>
-        <div class="drink3">
-            <img src="../../../../assets/images/czarne-piwo.png" alt="photo">
-            <div class="tittle">Właściwości czarnego piwa</div>
+<div class="wrapper">
+    <div class="drink" *ngFor="let article of articles">
+        <div (click)="gotoDetails(article.id)">
+            <img src="../../../../assets/images/{{article.img}}" alt="photo">
+            <div class="tittle">{{article.name}}</div>
         </div>
     </div>
-    <div class="section2">
-        <div class="drink4">
-            <img src="../../../../assets/images/koktajle.png" alt="photo">
-            <div class="tittle">Koktajle na każdą okazję</div>
-        </div>
-        <div class="drink5">
-            <img src="../../../../assets/images/jablko.png" alt="photo">
-            <div class="tittle">Sposób na jabłko</div>
-        </div>
-        <div class="drink6">
-            <img src="../../../../assets/images/grzaniec.png" alt="photo">
-            <div class="tittle">Pomysł na grzańca</div>
-        </div>
-    </div>
-</div>
-
-<div *ngFor="let article of articles;">
-    <td>{{article.name}}</td>
 </div>
