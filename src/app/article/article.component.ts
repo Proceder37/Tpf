@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Drink } from '../models/drink.model';
-import { DrinksService } from '../services/drinks.service';
+import { Article } from '../models/article.model';
+import { ArticlesService } from '../services/articles.service';
 
 @Component({
   selector: 'app-article',
@@ -21,8 +21,8 @@ export class ArticleComponent implements OnInit {
     {id:'6', name:'Pomysł na grzańca', img:'cytrynowka.png', des:'aaaaaaaaaa'}
   ]
   */
-  articles$: Observable<Drink[]> | undefined;
-  constructor(protected router:Router, protected drinksService:DrinksService) {
+  articles$: Observable<Article[]> | undefined;
+  constructor(protected router:Router, protected articlesService:ArticlesService) {
 
    }
 
@@ -31,7 +31,7 @@ export class ArticleComponent implements OnInit {
   }
 
   reloadElements(){
-    this.articles$ = this.drinksService.loadAllDrinks();
+    this.articles$ = this.articlesService.loadAllArticles();
   }
   gotoDetails(id:string){
     this.router.navigateByUrl("article/"+id)

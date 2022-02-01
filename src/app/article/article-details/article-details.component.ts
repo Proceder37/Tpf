@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Drink } from 'src/app/models/drink.model';
-import { DrinksService } from 'src/app/services/drinks.service';
+import { Article } from 'src/app/models/article.model';
+import { ArticlesService } from 'src/app/services/articles.service';
 
 @Component({
   selector: 'app-article-details',
@@ -21,15 +21,15 @@ export class ArticleDetailsComponent implements OnInit {
   */
 description=[]
 
-drink:any;
+article:any;
 
  //description: {id: string; name: string};
 
-  constructor(private router : ActivatedRoute,  protected drinksService:DrinksService) { }
+  constructor(private router : ActivatedRoute,  protected articlesService:ArticlesService) { }
 
   ngOnInit(): void {
     const id=this.router.snapshot.params.id
-    this.drinksService.getDrink(id).then(result=>{this.drink=result})
+    this.articlesService.getArticle(id).then(result=>{this.article=result})
     //this.description=this.router.snapshot.paramMap.getAll
     
   }

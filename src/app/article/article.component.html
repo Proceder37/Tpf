@@ -1,8 +1,8 @@
 <div class="wrapper">
-    <div class="drink" *ngFor="let article of articles$ | async">
+    <div class="article" *ngFor="let article of articles$ | async">
         <div (click)="gotoDetails(article.id)">
             <img [src]="article.image" alt="photo">
-            <div class="tittle">{{article.name}}</div>
+            <div class="tittle">{{article.title}}</div>
         </div>
     </div>
 </div>
