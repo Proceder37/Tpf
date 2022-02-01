@@ -1,8 +1,10 @@
 <div class="wrapper">
-    <div class="drink" *ngFor="let drink of drinks">
+    <div class="drink" *ngFor="let drink of drinks$ | async">
         <div (click)="goDetails(drink.id)">
-            <img src="../../../../assets/images/{{drink.img}}" alt="photo">
+            <img [src]="drink.image" alt="photo">
             <div class="tittle">{{drink.name}}</div>
         </div>
     </div>
 </div>
+
+

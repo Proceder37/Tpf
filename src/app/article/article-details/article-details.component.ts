@@ -10,17 +10,6 @@ import { ArticlesService } from 'src/app/services/articles.service';
 })
 export class ArticleDetailsComponent implements OnInit {
 
- /* description=[
-    {id:'11', des:'aaaaaaaaaaa a a a a a'},
-    {id:'22', des:'bbbbbbbbbbbbb b b b b b'},
-    {id:'33', des:'cccccccccccc c  ccc  c c'},
-    {id:'44', des:'dddddddd d d  dd d d '},
-    {id:'55', des:'eeeeeeeeeee e e ee ee e'},
-    {id:'66', des:'fffffffffff f fff ffff f'}
-  ]
-  */
-description=[]
-
 article:any;
 
  //description: {id: string; name: string};

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Drink } from 'src/app/models/drink.model';
+import { DrinksService } from 'src/app/services/drinks.service';
 
 @Component({
   selector: 'app-drinks-details',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrinksDetailsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  drink:any;
+  
+   //description: {id: string; name: string};
+  
+    constructor(private router : ActivatedRoute,  protected drinksService:DrinksService) { }
+  
+    ngOnInit(): void {
+      const id=this.router.snapshot.params.id
+      this.drinksService.getDrink(id).then(result=>{this.drink=result})
+      //this.description=this.router.snapshot.paramMap.getAll
+      
+    }
+  
   }
-
-}
+  
