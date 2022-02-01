@@ -7,12 +7,14 @@ import { DrinksComponent } from './drinks/drinks.component';
 import { ShotsComponent } from './shots/shots.component';
 import { CocktailsComponent } from './cocktails/cocktails.component';
 import { ArticleDetailsComponent } from './article/article-details/article-details.component';
+import { DrinksDetailsComponent } from './drinks/drinks-details/drinks-details.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'article', component: ArticleComponent },
   { path: 'article/:id', component: ArticleDetailsComponent },
   { path: 'drinks', component: DrinksComponent },
+  { path: 'drinks/:id', component: DrinksDetailsComponent},
   { path: 'shots', component: ShotsComponent },
   { path: 'cocktails', component: CocktailsComponent },
 ];
@@ -24,5 +26,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [
   ArticleComponent,
-  ArticleDetailsComponent
+  ArticleDetailsComponent,
+  DrinksComponent,
+  DrinksDetailsComponent
 ]

@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import {AngularFireFunctionsModule} from '@angular/fire/compat/functions';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +14,8 @@ import { DrinksComponent } from './drinks/drinks.component';
 import { ShotsComponent } from './shots/shots.component';
 import { CocktailsComponent } from './cocktails/cocktails.component';
 import { ArticleDetailsComponent } from './article/article-details/article-details.component';
+import { DrinksDetailsComponent } from './drinks/drinks-details/drinks-details.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,11 +26,17 @@ import { ArticleDetailsComponent } from './article/article-details/article-detai
     DrinksComponent,
     ShotsComponent,
     CocktailsComponent,
-    ArticleDetailsComponent
+    ArticleDetailsComponent,
+    DrinksDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireFunctionsModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

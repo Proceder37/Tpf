@@ -1,1 +1,8 @@
-<p>drinks works!</p>
+<div class="wrapper">
+    <div class="drink" *ngFor="let drink of drinks">
+        <div (click)="goDetails(drink.id)">
+            <img src="../../../../assets/images/{{drink.img}}" alt="photo">
+            <div class="tittle">{{drink.name}}</div>
+        </div>
+    </div>
+</div>

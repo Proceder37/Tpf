@@ -1,7 +1,7 @@
 <div class="wrapper">
-    <div class="drink" *ngFor="let article of articles">
+    <div class="drink" *ngFor="let article of articles$ | async">
         <div (click)="gotoDetails(article.id)">
-            <img src="../../../../assets/images/{{article.img}}" alt="photo">
+            <img [src]="article.image" alt="photo">
             <div class="tittle">{{article.name}}</div>
         </div>
     </div>
