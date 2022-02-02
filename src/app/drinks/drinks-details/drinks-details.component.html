@@ -1,4 +1,20 @@
-{{drink?.name}}
-{{drink?.image}}
-{{drink?.description}}
-{{drink?.kcal}}
+<div class="wrapper">
+    <div class="name">
+        <h2>{{drink?.name}}</h2>
+        <h4>{{drink?.description}}</h4>
+        <hr>
+        <h2>Składniki</h2>
+        <h4>{{drink?.ingredients}}</h4>
+        <hr>
+        <h2>Przepis na {{drink?.name}}</h2>
+        <h4>{{drink?.instruction}}</h4>
+        <hr>
+        <h4>Ilość kcal: {{drink?.kcal}}</h4>
+        <hr>
+        <br><br>
+        <button mat-raised-button routerLink="/drinks" routerLinkActive="active-link">Powrót</button>
+    </div>
+    <div class="image">
+        <img [src]="drink.image" alt="photo">
+    </div>
+</div>
