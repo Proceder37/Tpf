@@ -1,0 +1,26 @@
+<div class="form" *ngIf="!isSignedIn">
+    <h1>Zarejestruj się</h1>
+    <div class="field">
+        <input type="text" placeholder="Podaj e-mail" #emailSignup>
+    </div>
+    <div class="field">
+        <input type="password" placeholder="Podaj hasło" #passwordSignup>
+    </div>
+    <div class="buton">
+        <button (click)="onSignUp(emailSignup.value, passwordSignup.value)">Zarejestruj się</button>
+    </div>
+  </div>
+  <hr>
+  <div class="form" *ngIf="!isSignedIn">
+    <h1>Zaloguj się</h1>
+    <div class="field">
+        <input type="text" placeholder="Podaj e-mail" #email>
+    </div>
+    <div class="field">
+        <input type="password" placeholder="Podaj hasło" #password>
+    </div>
+    <div class="buton">
+        <button (click)="onSignIn(email.value, password.value)">Zaloguj się</button>
+    </div>
+  </div>
+  <app-logged-in *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-logged-in>

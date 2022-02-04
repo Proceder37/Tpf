@@ -1,0 +1,19 @@
+.form{
+    width: 100%;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .field{
+        display: grid;
+        padding-bottom: 20px;
+    }
+    button {
+        border-radius: 23px;
+        margin: 0 20px;
+        width: 120px;
+        font-size: 300;
+        font-weight: 500 !important;
+        height: 45px;
+      }
+}

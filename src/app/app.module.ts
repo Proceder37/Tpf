@@ -16,6 +16,9 @@ import { CocktailsComponent } from './cocktails/cocktails.component';
 import { ArticleDetailsComponent } from './article/article-details/article-details.component';
 import { DrinksDetailsComponent } from './drinks/drinks-details/drinks-details.component';
 import { environment } from 'src/environments/environment';
+import { SignupComponent } from './signup/signup.component';
+import { LoggedInComponent } from './logged-in/logged-in.component';
+import { FirebaseService } from './services/firebase.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { environment } from 'src/environments/environment';
     ShotsComponent,
     CocktailsComponent,
     ArticleDetailsComponent,
-    DrinksDetailsComponent
+    DrinksDetailsComponent,
+    SignupComponent,
+    LoggedInComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +41,17 @@ import { environment } from 'src/environments/environment';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireFunctionsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyCCNr2UOaWW9XNlYXosmamhjGDUnQNi1KI",
+      authDomain: "drink-acad3.firebaseapp.com",
+      projectId: "drink-acad3",
+      storageBucket: "drink-acad3.appspot.com",
+      messagingSenderId: "1046321367759",
+      appId: "1:1046321367759:web:d007e80f4f71f89d2485ba"
+    }),
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
