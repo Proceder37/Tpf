@@ -12,7 +12,7 @@ Web-application which helps people to find favorite drink recipe.
 
 ## How to run a application?
 
-npm i
-ng serve
-Navigate to `http://localhost:4200/`.
+- npm i
+- ng serve
+- Navigate to `http://localhost:4200/`.
 
