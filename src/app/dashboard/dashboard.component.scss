@@ -41,20 +41,5 @@
         /* Chrome, Safari, Opera */ 
           animation: moveanimation 2s infinite;
       }
-       
-      /* Chrome, Safari, Opera */ 
-      @-webkit-keyframes moveanimation {
-        0%   { width: 100px; height: 100px;}
-        25%  {width: 150px; height: 150px;}
-        70% {width: 100px; height: 100px;}
-        10% {width: 100px; height: 100px;}
-      }
-      
-      @keyframes moveanimation {
-        0%   {width: 100px; height: 100px;}
-        25%  {width: 150px; height: 150px;}
-        70% {width: 100px; height: 100px;}
-        100% {width: 100px; height: 100px;}
-      }
 }
 
