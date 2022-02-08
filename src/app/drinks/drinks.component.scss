@@ -22,3 +22,32 @@
         }
     }
 }
+
+@media (min-width:0) and (max-width:768px){ 
+    .wrapper {
+
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        .drink{
+                display: flex;
+                align-items: center;
+                height: auto;
+                padding: 24px ;
+                text-align: center;
+                flex-direction: column;
+                width: 30%;
+            img{
+                width: 150%;
+                height: auto;
+            }
+            .tittle{
+                font-size: xx-large;
+                padding-top: 10px;
+                text-align: center;
+                font-weight: 600;
+            }
+        }
+    }
+
+}

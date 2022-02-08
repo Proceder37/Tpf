@@ -11,7 +11,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ArticleComponent } from './article/article.component';
 import { DrinksComponent } from './drinks/drinks.component';
-import { CocktailsComponent } from './cocktails/cocktails.component';
 import { ArticleDetailsComponent } from './article/article-details/article-details.component';
 import { DrinksDetailsComponent } from './drinks/drinks-details/drinks-details.component';
 import { environment } from 'src/environments/environment';
@@ -29,7 +28,6 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     ArticleComponent,
     DrinksComponent,
-    CocktailsComponent,
     ArticleDetailsComponent,
     DrinksDetailsComponent,
     SignupComponent,
