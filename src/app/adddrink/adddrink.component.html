@@ -1,0 +1,24 @@
+<div class= "form-group">
+    <input type="text" class="form-control" [(ngModel)]="drinkName" placeholder="Podaj nazwę drinka">
+</div>
+<div class= "form-group">
+    <input type="text" class="form-control" [(ngModel)]="drinkDescription" placeholder="Podaj opis drinka">
+</div>
+<div class= "form-group">
+    <input type="text" class="form-control" [(ngModel)]="drinkIngredients" placeholder="Podaj składniki drinka">
+</div>
+<div class= "form-group">
+    <input type="text" class="form-control" [(ngModel)]="drinkInstruction" placeholder="Podaj instrukcję do przygotowania drinka">
+</div>
+<div class= "form-group">
+    <input type="text" class="form-control" [(ngModel)]="drinkKcal" placeholder="Podaj kaloryczność drinka">
+</div>
+<div class= "form-group">
+    <input type="text" class="form-control" [(ngModel)]="drinkImage" placeholder="Dodaj zdjęcie drinka">
+</div>
+<div class= "form-group">
+    <button class="btn btn-primary" (click)="CreateRecord()" [disabled]="!drinkName || !drinkDescription || !drinkIngredients || !drinkInstruction || !drinkKcal || !drinkImage"> Utwórz Drink </button>
+</div>
+<div class="form-group">
+    <h4>{{message}}</h4>
+</div>

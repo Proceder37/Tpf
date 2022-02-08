@@ -11,7 +11,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ArticleComponent } from './article/article.component';
 import { DrinksComponent } from './drinks/drinks.component';
-import { ShotsComponent } from './shots/shots.component';
 import { CocktailsComponent } from './cocktails/cocktails.component';
 import { ArticleDetailsComponent } from './article/article-details/article-details.component';
 import { DrinksDetailsComponent } from './drinks/drinks-details/drinks-details.component';
@@ -19,6 +18,9 @@ import { environment } from 'src/environments/environment';
 import { SignupComponent } from './signup/signup.component';
 import { LoggedInComponent } from './logged-in/logged-in.component';
 import { FirebaseService } from './services/firebase.service';
+import { AdddrinkComponent } from './adddrink/adddrink.component';
+import {AddService} from './services/add.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,15 +29,16 @@ import { FirebaseService } from './services/firebase.service';
     HeaderComponent,
     ArticleComponent,
     DrinksComponent,
-    ShotsComponent,
     CocktailsComponent,
     ArticleDetailsComponent,
     DrinksDetailsComponent,
     SignupComponent,
-    LoggedInComponent
+    LoggedInComponent,
+    AdddrinkComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
@@ -51,7 +54,7 @@ import { FirebaseService } from './services/firebase.service';
       appId: "1:1046321367759:web:d007e80f4f71f89d2485ba"
     }),
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService, AddService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

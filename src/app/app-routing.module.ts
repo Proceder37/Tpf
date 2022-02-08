@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleComponent } from './article/article.component';
 import { DrinksComponent } from './drinks/drinks.component';
-import { ShotsComponent } from './shots/shots.component';
 import { CocktailsComponent } from './cocktails/cocktails.component';
 import { ArticleDetailsComponent } from './article/article-details/article-details.component';
 import { DrinksDetailsComponent } from './drinks/drinks-details/drinks-details.component';
 import { SignupComponent } from './signup/signup.component';
+import { AdddrinkComponent } from './adddrink/adddrink.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -16,9 +16,9 @@ const routes: Routes = [
   { path: 'article/:id', component: ArticleDetailsComponent },
   { path: 'drinks', component: DrinksComponent },
   { path: 'drinks/:id', component: DrinksDetailsComponent},
-  { path: 'shots', component: ShotsComponent },
   { path: 'cocktails', component: CocktailsComponent },
-  { path: 'signup', component: SignupComponent}
+  { path: 'signup', component: SignupComponent},
+  { path: 'adddrinks', component: AdddrinkComponent}
 ];
 
 @NgModule({
